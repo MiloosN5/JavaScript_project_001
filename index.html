@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Predavanje 6 - Zadatak</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript, portfolio, photo, icons">
+        <meta name="description" content="Portfolio website">
+        <meta name="author" content="Milos Novakovic">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">          
+        <!-- povezivanje sa Bootstrap predefinisanim klasama -->
+        <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+        <!-- povezivanje sa eksternim .css fajlom -->
+        <link rel="stylesheet" href="css/my-style-basics.css">
+        <link rel="stylesheet" href="css/my-style-index.css">
+        <!-- povezivanje sa "Google fontom - Open Sans" -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <!-- za ucitavanje Font Awesome ikonica -->        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+    <body>
+
+        <!-- NAVBAR -->
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light my-nav fw-bold">
+            <div class="container d-flex justify-content-between">
+                <a class="navbar-brand col-4">MILOS NOVAKOVIC</a>
+                <button class="navbar-toggler" id="my-nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                 MENU <span class="navbar-toggler-icon" id="my-nav-hamburgermenu"></span>
+                </button>
+                <div class="collapse navbar-collapse my-list justify-content-lg-end justify-content-md-start" id="navbarNavDropdown">
+                    <ul class="navbar-nav my-ul">
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link active" aria-current="page" href="#my-portfolio-section">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link" href="#my-about-section">ABOUT</a>
+                        </li>
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link" href="#my-contact-section">CONTACT</a>
+                        </li>
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link">SURVEY</a>
+                        </li> 
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link">COURSES</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HEADER -->
+
+        <header class="d-flex align-items-center flex-column text-white" id="my-header">
+            <div class="mt-4 mb-3"><img src="Resursi/img/avataaars.svg" width="180px"></div>
+            <div class="fw-bold" id="header-naslov">MILOS NOVAKOVIC</div>
+            <div>
+                <span class="my-line white-line">
+                    <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="m-4 text-center p-0" id="profesija">Frontend Developer - Web Designer - Scrum Master</div>
+        </header> 
+
+        <!-- PORTFOLIO -->
+
+        <section class="d-flex align-items-center flex-column pt-3 text-dark m-0" id="my-portfolio-section">
+            <div class="fw-bold" id="portfolio-naslov">PORTFOLIO</div>
+            <div>
+                <span class="my-line black-line">
+                    <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+                </span>
+            </div>  
+            <div class="container">
+                <div class="row my-portfolio-row m-auto d-flex justify-content-center">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 my-portfolio-div m-2 p-0">
+                        <div class="p-0 m-0 border border-white rounded-3 portfolio-slike" id="portfolio-slika1">
+                            <div class="background-hover-turquoise rounded-2 overflow-hidden d-flex justify-content-center align-items-center">
+                                <button type="button" class="btn btn-primary my-hover-plus-button d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <i class="fa fa-plus fa-3x my-hover-plus d-flex justify-content-center align-items-center"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 my-portfolio-div m-2 p-0">
+                        <div class="p-0 m-0 border border-white rounded-3 portfolio-slike" id="portfolio-slika2">
+                            <div class="background-hover-turquoise rounded-3"></div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 my-portfolio-div m-2 p-0">
+                        <div class="p-0 m-0 border border-white rounded-3 portfolio-slike" id="portfolio-slika3">
+                            <div class="background-hover-turquoise rounded-3"></div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 my-portfolio-div m-2 p-0">
+                        <div class="p-0 m-0 border border-white rounded-3 portfolio-slike" id="portfolio-slika4">
+                            <div class="background-hover-turquoise rounded-3"></div>
+                        </div>
+                    </div>                        
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 my-portfolio-div m-2 p-0">
+                        <div class="p-0 m-0 border border-white rounded-3 portfolio-slike" id="portfolio-slika5">
+                            <div class="background-hover-turquoise rounded-3"></div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 my-portfolio-div m-2 p-0">
+                        <div class="p-0 m-0 border border-white rounded-3 portfolio-slike" id="portfolio-slika6">
+                            <div class="background-hover-turquoise rounded-3"></div>
+                        </div>
+                    </div>   
+                </div>                           
+            </div>         
+        </section>
+
+        <!-- ABOUT -->
+
+        <section class="d-flex align-items-center flex-column pt-3 text-white" id="my-about-section">
+            <div class="fw-bold" id="about-naslov">ABOUT</div>
+            <div>
+                <span class="my-line white-line">
+                    <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="container">
+                <div class="row my-about-row d-flex justify-content-center">
+                    <div class="col-xl-3 col-lg-4 col-md-12 rounded-5 p-2">
+                        Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. The challenge associated with front end development is that the tools and techniques used to create the front end of a website change constantly and so the developer needs to constantly be aware of how the field is developing.
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-12 rounded-5 p-2">
+                        The objective of designing a site is to ensure that when the users open up the site they see the information in a format that is easy to read and relevant. This is further complicated by the fact that users now use a large variety of devices with varying screen sizes and resolutions thus forcing the designer to take into consideration these aspects when designing the site. They need to ensure that their site comes up correctly in different browsers...
+                    </div>
+                </div>  
+            </div>     
+        </section> 
+
+        <!-- CONTACT -->
+
+        <section class="d-flex align-items-center flex-column pt-3" id="my-contact-section">
+            <div class="fw-bold" id="contact-naslov">CONTACT ME</div>
+            <div>
+                <span class="my-line black-line">
+                    <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+                </span>
+            </div>
+            <form class="container" id="my-form">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control my-form-control" id="floatingText" placeholder="Full name"> 
+                    <label for="floatingText" class="form-label my-form-label">Full name</label>                                                  
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control my-form-control" id="floatingEmail" placeholder="Email address">
+                    <label for="floatingEmail" class="form-label my-form-label">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control my-form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword" class="form-label my-form-label">Password</label>
+                </div>              
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" id="floatingTextarea" placeholder="Message"></textarea>                    
+                    <label for="floatingTextarea" class="form-label my-form-label">Message</label>
+                </div>   
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary mb-3 text-center d-flex justify-content-center align-items-center border-0" id="my-send-button">
+                        <span id="my-send-button-span">Send</span>
+                    </button>
+                </div>
+            </form>          
+        </section>  
+
+        <!-- FOOTER -->
+
+        <footer class="container-fluid text-white" id="my-footer">
+            <div class="row text-center pt-5 pb-5">
+                <div class="col-lg-4 rounded-5 d-flex flex-column justify-content-start align-items-center" id="footer-location">
+                    <p>LOCATION</p>
+                    <p>SMARTINIT Novi Sad <br/> Serbia</p>
+                </div>
+                <div class="col-lg-4 rounded-5 d-flex flex-column justify-content-start align-items-center" id="footer-social">
+                    <p>AROUND THE WEB</p>
+                    <div class="container mw-100">
+                        <div class="row mw-100 red1 m-auto p-auto d-flex justify-content-center align-items-start">
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-facebook-f p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-twitter p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-linkedin-in p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-dribbble p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 rounded-5 d-flex flex-column justify-content-start align-items-center" id="footer-moreinfo">
+                    <p class="fw-bold">ABOUT SMARTINIT</p>
+                    <p class="fw-normal">PanonIT Code Academy -> <a href="">Start Course</a> .</p> 
+                </div>                
+            </div>  
+            <div class="row text-center text-white" id="footer-copyright">     
+                <div class="col-12">
+                    Copyright &copy; Milos Novakovic 2022
+                </div>   
+            </div>  
+        </footer>    
+        
+        <!-- MODAL -->
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog my-modal-dialog d-flex flex-column align-items-center justify-content-center">
+                <div class="modal-content">
+                    <div class="modal-header my-modal-header d-flex flex-column align-items-center justify-content-center p-3 pb-1 border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>    
+                        <h5 class="modal-title d-flex flex-column align-items-center justify-content-center pt-3" id="staticBackdropLabel">
+                            <div id="modal-naslov">C#</div>
+                            <div>
+                                <span class="my-line black-line">
+                                    <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </h5>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center justify-content-center py-0 border-0">
+                        <div class="p-0 modal-bodyslika m-0 border border-white rounded-3 mb-4" id="portfolio-slika1"></div>
+                        <p class="modal-body-opis text-center">C# is widely used for developing desktop applications, web applications and web services. 
+                         It is used in creating applications of Microsoft at a large scale.
+                         C# is also used in game development in Unity.
+                        </p>
+                    </div>
+                    <div class="modal-footer d-flex flex-column align-items-center justify-content-center border-0 pt-0 pb-4">
+                        <button type="button" class="btn-close my-modal-button rounded-3 d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                            <i class="fa fa-times me-1" aria-hidden="true"></i>
+                            <span class="text-white" id="my-modal-cancel-icon"> Close Window</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>                   
+    </body>
+</html>
