@@ -1,0 +1,278 @@
+/***** HEADER *****/
+
+
+    #my-header {
+        background: #1bbc9b;
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+
+    #header-naslov {
+        font-size: 40px;
+    }
+
+    /* horizontalne linije pored zvezdice => odnosi se na naslov svakog dela (HEADER, PORTFOLIO, ABOUT, CONTACT) */
+    .my-line {
+        display: flex;
+        flex-direction: row;
+        width: 230px;
+        padding: 5px 0;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .my-line:before, 
+    .my-line:after {
+        content: "";
+        flex: 1 1;
+        margin: 0 10px;
+        margin-bottom: 14px;
+        top: 10%;
+    }
+
+
+    .black-line:before, .black-line:after {
+        border-bottom: 3px solid black;
+    }
+
+    .white-line:before, .white-line:after  {
+        border-bottom: 3px solid white;
+    }
+
+    #profesija {
+        font-size: 16px;
+        color: #d2f9f7;
+        margin: 0px !important;
+    }
+
+
+/***** PORTFOLIO *****/
+
+
+    #my-portfolio-section {
+        width: 100%;
+        padding-top: 70px !important; 
+        padding-bottom: 70px !important;    
+    }
+
+    #portfolio-naslov, #about-naslov, #contact-naslov {
+        font-size: 34px;
+    }
+
+    #portfolio-naslov {
+        color: #6c757e;
+    }
+
+    .my-portfolio-row {
+        width: auto;    
+        max-width: 1000px;
+        margin: auto;
+        padding: auto;
+    }
+
+    .my-portfolio-div {
+        width: auto;
+        height: auto;    
+    }
+
+    .portfolio-slike {
+        width: 280px;
+        height: 200px; 
+        position: relative; 
+    }
+
+    #portfolio-slika1 {
+        background-image: url(../Resursi/img/image1.jpg);  
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;  
+    }
+
+    #portfolio-slika2 {
+        background-image: url(../Resursi/img/image2.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;    
+        background-size: 100% auto;    
+    }
+
+    #portfolio-slika3 {
+        background-image: url(../Resursi/img/image3.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;    
+        background-size: 100% auto;    
+    }
+
+    #portfolio-slika4 {
+        background-image: url(../Resursi/img/image4.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;    
+        background-size: 100% auto;    
+    }
+
+    #portfolio-slika5 {
+        background-image: url(../Resursi/img/image5.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;    
+        background-size: 100% auto;    
+    }
+
+    #portfolio-slika6 {
+        background-image: url(../Resursi/img/image6.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;    
+        background-size: 100% auto;    
+    }
+
+
+/***** MODAL *****/
+
+    /* hover */
+    .background-hover-turquoise {
+        background: rgba(0,0,0,0);
+        color: rgba(0,0,0, 0);
+        width: 100%;
+        height: 100%;
+    }
+
+    .my-hover-plus {
+        width: 100%;
+        height: 100%;
+    }
+
+    .my-hover-plus-button {
+        background: rgba(0,0,0,0) !important;
+        width: 100%;
+        height: 100%;
+        padding: 0px !important;
+        color: rgba(0,0,0,0) !important;
+        border: none;
+    }
+
+    .my-hover-plus-button:hover {
+        background: rgba(27, 188, 155, 0.9) !important;
+        width: 100%;
+        height: 100%;
+        color: white !important;
+        transition: all 0.5s ease-in-out 0.2s;
+        display: block !important;
+    }
+
+    /* modal */
+    .my-modal-dialog {
+        width: 800px;
+        max-width: 95%;
+    }
+
+    #modal-naslov {
+        font-size: 40px;
+    }    
+
+    .modal-bodyslika {
+        width: 370px;
+        height: 270px; 
+        max-width: 95%;        
+    }
+
+    .modal-body-opis {
+        font-size: 15px;
+        width: 370px;
+        max-width: 90%;
+    }
+
+    .my-modal-button { 
+        background: #1bbc9b !important;
+        opacity: 1 !important;
+        width: auto;
+        height: auto;
+        color: white !important;
+        padding: 6px 12px;
+    }
+
+    .my-modal-button:hover {
+        background: #169c81 !important;
+    }
+
+    #my-modal-cancel-icon {
+        font-size: 16px;
+    }
+
+ 
+/***** ABOUT *****/
+
+
+    #my-about-section {
+        background: #1bbc9b; 
+        padding-top: 70px !important;   
+        padding-bottom: 70px !important;      
+    }
+
+    .my-about-row {
+        margin: 2px;
+        color: #bcf6f3;
+        font-size: 15px;
+    }
+
+
+/***** CONTACT *****/
+
+
+    #my-contact-section {
+        color: #6c757e;
+        padding-top: 70px !important;   
+        padding-bottom: 30px !important;      
+    }
+
+    #my-form {
+        width: 700px;
+        max-width: 90%;
+    }
+
+    .my-form-control {
+        height: calc(2.8rem + 1px) !important;
+        font-size: 16px !important;
+    }
+
+    .my-form-label {
+        padding: 0.85rem 0.75rem !important;    
+        font-size: 15px !important;
+    }
+
+    #floatingTextarea {
+        height: 200px;
+    }
+
+    #my-send-button {
+        background: #1bbc9b;
+        padding: 16px 24px;
+    }
+
+    #my-send-button:hover {
+        background: #169c81 !important;
+    }
+
+    #my-send-button-span {
+        font-size: 17px;
+        width: auto;
+        margin: 0px 2px !important;
+        text-align: center;
+        margin: 0px !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+/***** RESPONSIVE *****/
+
+
+@media (max-width: 992px) {
+
+    #header-naslov {
+        font-size: 28px;
+    }
+
+    #portfolio-naslov, #about-naslov, #contact-naslov {
+        font-size: 28px;
+        font-weight: bold;
+     }  
+
+}
