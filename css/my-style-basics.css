@@ -1,0 +1,110 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/***** NAVBAR *****/
+
+
+    .my-nav {
+        background: #6c757e !important;
+        padding: 10px;
+    }
+
+    .my-nav * {
+        color: white !important;
+        font-size: 16px;    
+    }
+
+    #my-nav-button {
+        padding: 8px;
+        padding-left: 12px;
+        padding-bottom: 4px;
+        background: #1bbc9b;
+        font-size: 12px;
+    }
+
+    #my-nav-hamburgermenu {
+        border: none;
+        background-image: white !important;
+
+    }
+
+    /* promena boje hamburger menu-a* => menjan je atribut stroke da bude beo */
+    #my-nav-button .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        background-size: 18px; 
+    }
+
+    .my-list * {
+        font-size: 13px;
+    }
+
+    .my-ul li > a:hover {
+        color:rgba(27, 188, 155) !important;
+    }
+
+
+/***** FOOTER *****/
+
+
+    #my-footer {
+        background: #2d3e50;
+    }
+
+    #footer-location {
+        padding: 5px;
+    }
+
+    #footer-location p:first-of-type {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #footer-location p:nth-of-type(2) {
+        color: #dee5ed;
+        font-size: 17px;
+        font-weight: normal;
+    }
+
+    #footer-social {
+        padding: 5px;
+        margin-bottom: 22px;
+    }
+
+    #footer-social p:first-of-type {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .footer-icons {
+        border: 2px solid white;
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer-icons:hover {
+        background: white;
+        color: #2d3e50;
+    }
+
+    #footer-moreinfo {
+        padding: 5px;
+    }
+
+    #footer-moreinfo p:first-of-type {
+        font-size: 18px;
+    }
+
+    #footer-moreinfo p:nth-of-type(2) {
+        color: #dee5ed;
+        font-size: 17px;
+    }
+
+    #footer-copyright {
+        background: #1b252f;
+        font-size: 13px;
+        padding: 25px;
+    }
+
+
