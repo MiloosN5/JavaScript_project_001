@@ -1,0 +1,172 @@
+/***** HEADER *****/
+
+    #my-header {
+        background: #1bbc9b;
+        padding-top: 120px;
+        padding-bottom: 40px;
+    }
+
+    #my-header-naslov {
+        font-size: 40px; 
+    }
+
+    #my-header-naslov p:first-of-type {
+        font-size: 14px;
+        color: rgb(48, 120, 132);
+    }
+
+    #my-header-naslov p:nth-of-type(2) {
+        font-size: 34px;
+    }
+
+    .my-header-wrapper { 
+        background: rgba(255,255,255,0);
+    }
+
+    .my-header-wrapper p:first-of-type {
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 8px;
+    }
+
+    .my-header-wrapper p:nth-of-type(2) {
+        font-size: 13px;
+        margin-bottom: 5px;    
+    }
+
+    .my-header-hover-button {
+        width: 80px;
+        height: 80px;
+    }
+
+    .my-header-icon {
+        width: 50px;
+        height: 50px;
+        -webkit-text-stroke: 2px rgb(48, 120, 132);
+        font-size: 34px;
+    }
+
+    /* HEADER - HOVER */
+
+        .my-header-hover-button:hover {
+            background: rgb(48, 120, 132) !important;
+            width: 80px;
+            height: 80px;
+            padding: 0px !important;
+            border: none;
+        }
+
+        .my-header-hover-button:hover .my-header-icon {
+            color: rgb(48, 120, 132) !important;
+            width: 50px;
+            height: 50px;
+            -webkit-text-stroke: 2px white;
+            font-size: 34px;
+        }
+
+
+/***** PORTFOLIO *****/
+
+
+    #my-portfolio-section {
+        padding-top: 70px !important; 
+        padding-bottom: 70px !important;    
+    }
+
+    #my-portfolio-naslov {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+
+    #my-portfolio-naslov p:first-of-type {
+        font-size: 14px;
+        font-weight: 900;
+    }
+
+    #my-portfolio-naslov p:nth-of-type(2) {
+        font-size: 34px;
+        color: rgb(27, 188, 155);
+    }
+
+    .my-portfolio-div {
+        width: 450px;
+        height: 300px;   
+    }
+
+    .my-portfolio-slike {
+        width: 450px;
+        height: 300px; 
+        max-width: 100%;
+    }
+
+    #portfolio-slika1 {
+        background-image: url(../Resursi/img/portfolio-1.jpg);  
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto; 
+    }
+
+    #portfolio-slika2 {
+        background-image: url(../Resursi/img/portfolio-2.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;    
+        background-size: 100% auto;    
+    }
+
+    #portfolio-slika3 {
+        background-image: url(../Resursi/img/portfolio-3.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;    
+        background-size: 100% auto;    
+    }
+
+    #portfolio-slika4 {
+        background-image: url(../Resursi/img/portfolio-4.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;    
+        background-size: 100% auto;    
+    }
+
+    .my-portfolio-wrapper {
+        background: rgba(0,0,0,0);
+        width: 400px;
+        height: 250px;
+        max-width: 95%;
+    }
+
+    .my-portfolio-wrapper p:first-of-type {
+        font-size: 10px;
+    }
+
+    .my-portfolio-wrapper p:nth-of-type(2) {
+        font-size: 14px;  
+    }
+
+    /* PORTFOLIO - HOVER */
+
+        .my-portfolio-div:hover .my-portfolio-wrapper {
+            width: 400px;
+            max-width: 95%;
+            height: 250px;
+            background: rgba(27, 188, 155, 0.9) !important;
+            color: white;
+            outline-style: solid;
+            outline-color: white;
+            outline-width: 25px;
+            transition: all 0.03s ease-in-out 0.1s;
+        }
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
