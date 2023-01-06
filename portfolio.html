@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript, portfolio, photo, icons">
+        <meta name="description" content="Portfolio website">
+        <meta name="author" content="Milos Novakovic">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+        <!-- povezivanje sa Bootstrap predefinisanim klasama -->
+        <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+        <!-- povezivanje sa eksternim .css fajlom -->
+        <link rel="stylesheet" href="css/my-style-basics.css">
+        <link rel="stylesheet" href="css/my-style-portfolio.css">
+        <!-- povezivanje sa "Google fontom - Open Sans" -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <!-- za ucitavanje Font Awesome ikonica -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+    <body>
+
+        <!-- NAVBAR -->
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light my-nav fw-bold">
+            <div class="container d-flex justify-content-between">
+                <a class="navbar-brand col-4" href="index.html">MILOS NOVAKOVIC</a>
+                <button class="navbar-toggler" id="my-nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                 MENU <span class="navbar-toggler-icon" id="my-nav-hamburgermenu"></span>
+                </button>
+                <div class="collapse navbar-collapse my-list justify-content-lg-end justify-content-md-start" id="navbarNavDropdown">
+                    <ul class="navbar-nav my-ul">
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link active">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link">ABOUT</a>
+                        </li>
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link">CONTACT</a>
+                        </li>
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link">SURVEY</a>
+                        </li> 
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link">COURSES</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HEADER --> 
+
+        <header class="d-flex align-items-center flex-column text-white" id="my-header">
+            <div class="fw-bold d-flex flex-column justify-content-center align-items-center h-auto" id="my-header-naslov">
+                <p class="m-1 fw-bold">SERVICES</p>
+                <p class="mb-2">What We Offer</p>
+            </div>
+            <div class="container">
+                <div class="row my-header-row w-auto h-auto m-auto d-flex justify-content-center">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-5 col-sm-12 my-header-div my-2 mx-0 p-0 d-flex flex-row justify-content-center align-items-center">
+                        <div class="p-auto m-auto w-100 my-header-wrapper d-flex flex-column justify-content-center align-items-center" id="portfolio-slika1A">
+                            <button type="button" class="btn btn-primary my-header-hover-button bg-white border-0 p-0 rounded-circle d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <i class="fa-solid fa-mobile-screen my-header-icon text-white d-flex justify-content-center align-items-center"></i>
+                            </button>
+                            <p class="border border-0 fw-bold">Responsive</p>
+                            <p class="border border-0">Looks great on any screen size</p>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-5 col-sm-12 my-header-div my-2 mx-0 p-0 d-flex flex-row justify-content-center align-items-center">
+                        <div class="p-auto m-auto w-100 my-header-wrapper d-flex flex-column justify-content-center align-items-center" id="portfolio-slika1A">
+                            <button type="button" class="btn btn-primary my-header-hover-button bg-white border-0 p-0 rounded-circle d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <i class="fa-solid fa-pen my-header-icon text-white d-flex justify-content-center align-items-center"></i>
+                            </button>
+                            <p class="border border-0 fw-bold">Redesigned</p>
+                            <p class="border border-0">Freshly redesigned for Bootstrap 5</p>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-5 col-sm-12 my-header-div my-2 mx-0 p-0 d-flex flex-row justify-content-center align-items-center">
+                        <div class="p-auto m-auto w-100 my-header-wrapper d-flex flex-column justify-content-center align-items-center" id="portfolio-slika1A">
+                            <button type="button" class="btn btn-primary my-header-hover-button bg-white border-0 p-0 rounded-circle d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <i class="fa-solid fa-thumbs-up my-header-icon text-white d-flex justify-content-center align-items-center"></i>
+                            </button>
+                            <p class="border border-0 fw-bold">Favorited</p>
+                            <p class="border border-0">Million of users <i class="fa-solid fa-heart"></i> Start Bootstrap!</p>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-5 col-sm-12 my-header-div my-2 mx-0 p-0 d-flex flex-row justify-content-center align-items-center">
+                        <div class="p-auto m-auto w-100 my-header-wrapper d-flex flex-column justify-content-center align-items-center" id="portfolio-slika1A">
+                            <button type="button" class="btn btn-primary my-header-hover-button bg-white border-0 p-0 rounded-circle d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <i class="fa-solid fa-circle-question my-header-icon text-white d-flex justify-content-center align-items-center"></i>
+                            </button>
+                            <p class="border border-0 fw-bold">Question</p>
+                            <p class="border border-0">I mustache you a question</p>
+                        </div>
+                    </div>       
+                </div>                           
+            </div>         
+        </header> 
+
+        <!-- PORTFOLIO -->
+
+        <section class="d-flex align-items-center flex-column pt-3 text-dark m-0 w-100" id="my-portfolio-section">
+            <div class="fw-bold d-flex flex-column justify-content-center align-items-center" id="my-portfolio-naslov">
+                <p class="m-1 text-dark">PORTFOLIO</p>
+                <p class="mb-2">Recent Projects</p>
+            </div>
+            <div class="container">
+                <div class="row my-portfolio-row m-auto p-auto w-auto h-auto mw-100 d-flex justify-content-center">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 my-portfolio-div m-lg-0 m-1 p-0 d-flex justify-content-center align-items-center">
+                        <div class="p-0 m-0 my-portfolio-slike d-flex justify-content-center align-items-center" id="portfolio-slika1">
+                            <div class="my-portfolio-wrapper text-white overflow-hidden d-flex flex-column justify-content-end align-items-start">
+                                <p class="fw-bold mx-4 my-1">STATIONARY</p>
+                                <p class="mx-4 mb-4">A yellow pencil with envelopes on a clean blue backdrop!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 my-portfolio-div m-lg-0 m-1 p-0 d-flex justify-content-center align-items-center">
+                        <div class="p-0 m-0 my-portfolio-slike d-flex justify-content-center align-items-center" id="portfolio-slika2">
+                            <div class="my-portfolio-wrapper text-white overflow-hidden d-flex flex-column justify-content-end align-items-start">
+                                <p class="fw-bold mx-4 my-1">ICE CREAM</p>
+                                <p class="mx-4 mb-4">A dark blue background with a colored pencil, a clip and a tiny ice cream cone!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 my-portfolio-div m-lg-0 m-1 p-0 d-flex justify-content-center align-items-center">
+                        <div class="p-0 m-0 my-portfolio-slike d-flex justify-content-center align-items-center" id="portfolio-slika3">
+                            <div class="my-portfolio-wrapper text-white overflow-hidden d-flex flex-column justify-content-end align-items-start">
+                                <p class="fw-bold mx-4 my-1">STATIONARY</p>
+                                <p class="mx-4 mb-4">A yellow pencil with envelopes on a clean blue backdrop!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 my-portfolio-div m-lg-0 m-1 p-0 d-flex justify-content-center align-items-center">
+                        <div class="p-0 m-0 my-portfolio-slike d-flex justify-content-center align-items-center" id="portfolio-slika4">
+                            <div class="my-portfolio-wrapper text-white overflow-hidden d-flex flex-column justify-content-end align-items-start">
+                                <p class="fw-bold mx-4 my-1">WORKSPACE</p>
+                                <p class="mx-4 mb-4">A yellow workspace with some scissors, pencils and other objects.</p>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>                           
+            </div>         
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer class="container-fluid text-white" id="my-footer">
+            <div class="row text-center pt-5 pb-5">
+                <div class="col-lg-4 rounded-5 d-flex flex-column justify-content-start align-items-center" id="footer-location">
+                    <p>LOCATION</p>
+                    <p>SMARTINIT Novi Sad <br/> Serbia</p>
+                </div>
+                <div class="col-lg-4 rounded-5 d-flex flex-column justify-content-start align-items-center" id="footer-social">
+                    <p>AROUND THE WEB</p>
+                    <div class="container mw-100">
+                        <div class="row mw-100 red1 m-auto p-auto d-flex justify-content-center align-items-start">
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-facebook-f p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-twitter p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-linkedin-in p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-dribbble p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 rounded-5 d-flex flex-column justify-content-start align-items-center" id="footer-moreinfo">
+                    <p class="fw-bold">ABOUT SMARTINIT</p>
+                    <p class="fw-normal">PanonIT Code Academy -> <a href="">Start Course</a> .</p> 
+                </div>                
+            </div>  
+            <div class="row text-center text-white" id="footer-copyright">     
+                <div class="col-12">
+                    Copyright &copy; Milos Novakovic 2022
+                </div>   
+            </div>  
+        </footer>    
+    </body>
+</html>
