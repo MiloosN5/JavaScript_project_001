@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('../font/Segoe UI Italic'), url('../font/Segoe UI Italic.woff') format('woff');
+    }
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#my-wrapper-div {
+    height: 100vh;
+}
+
+
+/***** HEADER *****/
+
+    #my-header-quiz {
+        background: #1bbc9b;
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+
+    #my-portfolio-INTRO {
+        font-family: 'Segoe UI Italic';
+        font-size: 20px;
+    } 
+ 
+    #my-bigheader-INTRO {
+        font-size: 30px;
+    }
+    
+    #my-note-INTRO {
+        font-size: 13px;
+    }
+    
+    #my-floating-div-Q1 {
+        display: none;
+    }
+
+    .my-button-quiz {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+    
+
+    
+  
+
+
+
+
+
+
