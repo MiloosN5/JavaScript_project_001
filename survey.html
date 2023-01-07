@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+    <head>
+        <!-- povezivanje sa Bootstrap predefinisanim klasama -->
+        <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script> 
+        <!-- povezivanje sa eksternim .css fajlom -->
+        <link rel="stylesheet" type="text/css" href="css/my-style-basics.css">
+        <link rel="stylesheet" type="text/css" href="css/my-style-survey.css">
+        
+        <!-- za ucitavanje Font Awesome ikonica -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+        <!-- Google fontovi -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">       
+    </head>
+    <body>
+<div>
+    <div class="d-flex flex-column" id="my-wrapper-div">
+
+        <!-- NAVBAR -->
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light my-nav fw-bold">
+            <div class="container d-flex justify-content-between">
+                <a class="navbar-brand col-4" href="index.html">MILOS NOVAKOVIC</a>
+                <button class="navbar-toggler" id="my-nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                 MENU <span class="navbar-toggler-icon" id="my-nav-hamburgermenu"></span>
+                </button>
+                <div class="collapse navbar-collapse my-list justify-content-lg-end justify-content-md-start" id="navbarNavDropdown">
+                    <ul class="navbar-nav my-ul">
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link active" aria-current="page" href="portfolio.html">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link">ABOUT</a>
+                        </li>
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link">CONTACT</a>
+                        </li>
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link">SURVEY</a>
+                        </li>   
+                        <li class="nav-item my-1 mx-lg-2">
+                            <a class="nav-link" href="courses.html">COURSES</a>
+                        </li>                     
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HEADER -->
+
+        <header class="text-white flex-grow-1 h-auto text-center" id="my-header-quiz"> 
+            <div class="container text-dark mt-5 text-center" id="my-quiz-wrapper"> 
+                <!-- INTRO -->
+                <p class="fw-bold fst-italic mb-1 p-0" id="my-portfolio-INTRO">Portfolio</p>
+                <p class="fw-bold text-uppercase mb-1 p-0" id="my-bigheader-INTRO">Wondering if tech is right for you?</p>
+                <p class="mb-1 pb-2" id="my-note-INTRO">Take this 3-minute survey and find out</p>
+                <!-- Question 1 of 5 -->
+                <p class="d-none" id="my-question-label-Q1"></p>
+                <p class="d-none" id="my-question-title-Q1">Before we dive in, what's your name?</p>
+                <p class="d-none" id="my-note-Q1">(First name's fine!)</p>
+                <div id="my-floating-div-Q1">
+                    <div class="form-floating" id="my-formFloating-Q1">
+                        <input type="text" id="my-input-Q1" class="mb-1 form-control" placeholder="Type your answer here ...">
+                        <label for="my1-input-Q1" id="my-label-Q1">Type your answer here ...</label>
+                    </div>
+                </div> 
+            </div>
+            <!-- Dugmad -->
+            <div class="container mb-5" id="my-buttons-div">
+                <button class="btn btn-dark rounded-0 my-button-quiz" id="my-button-INTRO" onclick="startQuiz()">START</button>
+                <button class="btn btn-dark rounded-0 d-none my-button-quiz" id="my-button-Q1" onclick="submitQ1()">NEXT</button>
+                <button class="btn btn-dark rounded-0 d-none my-button-quiz" id="my-button-Q2" onclick="submitQ2()">NEXT</button>
+                <button class="btn btn-dark rounded-0 d-none my-button-quiz" id="my-button-Q3" onclick="submitQ3()">NEXT</button>
+                <button class="btn btn-dark rounded-0 d-none my-button-quiz" id="my-button-Q4" onclick="submitQ4()">NEXT</button> 
+                <button class="btn btn-dark rounded-0 d-none my-button-quiz" id="my-button-Q5" onclick="submitQ5()">SUBMIT</button>    
+            </div>   
+        </header> 
+
+        <!-- FOOTER -->
+
+        <footer class="container-fluid text-white" id="my-footer">
+            <div class="row text-center pt-5 pb-5">
+                <div class="col-lg-4 rounded-5 d-flex flex-column justify-content-start align-items-center" id="footer-location">
+                    <p>LOCATION</p>
+                    <p>SMARTINIT Novi Sad <br/> Serbia</p>
+                </div>
+                <div class="col-lg-4 rounded-5 d-flex flex-column justify-content-start align-items-center" id="footer-social">
+                    <p>AROUND THE WEB</p>
+                    <div class="container mw-100">
+                        <div class="row mw-100 red1 m-auto p-auto d-flex justify-content-center align-items-start">
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-facebook-f p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-twitter p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-linkedin p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                            <div class="footer-icons col-3 d-flex justify-content-center border border-white rounded-3 align-items-center m-2 mt-0">
+                                <i class="fa-brands fa-dribbble p-0 m-0" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 rounded-5 d-flex flex-column justify-content-start align-items-center" id="footer-moreinfo">
+                    <p class="fw-bold">ABOUT SMARTINIT</p>
+                    <p class="fw-normal">PanonIT Code Academy -> <a href="">Start Course</a> .</p> 
+                </div>                
+            </div>  
+            <div class="row text-center text-white" id="footer-copyright">     
+                <div class="col-12">
+                    Copyright &copy; Milos Novakovic 2022
+                </div>   
+            </div>  
+        </footer>    
+    </div> 
+    <!-- javascript eksterni fajl -->
+    <script src="js/script.js"></script>     
+    </body>
+</html>
