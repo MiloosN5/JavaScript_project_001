@@ -1,0 +1,57 @@
+{
+  "izborKurseva": [
+    {
+      "id": 0,
+      "course": "Osnove programiranja",
+      "date": "01.04.2022",
+      "duration": "20",
+      "price": "250"
+    },
+    {
+      "id": 1,
+      "course": "Napredno programiranje",
+      "date": "01.04.2022",
+      "duration": "20",
+      "price": "250"
+    },
+    {
+      "id": 2,
+      "course": "Web programiranje - backend",
+      "date": "01.05.2022",
+      "duration": "30",
+      "price": "350"
+    },
+    {
+      "id": 3,
+      "course": "Web programiranje - frontend",
+      "date": "01.05.2022",
+      "duration": "30",
+      "price": "350"
+    },
+    {
+      "id": 4,
+      "course": "Manuelno testiranje softvera",
+      "date": "15.04.2022",
+      "duration": "",
+      "price": "250"
+    },
+    {
+      "id": 5,
+      "course": "Automatsko testiranje softvera",
+      "date": "15.04.2022",
+      "duration": "",
+      "price": "250"
+    }
+  ],
+  "rezervisaniKursevi": [
+    {
+      "ime2": "MilosNew",
+      "prezime2": "NovakovicNew",
+      "email2": "exampleNew@gmail.com",
+      "komentar2": "",
+      "kurs2": "Automatsko testiranje softvera",
+      "cena2": "250",
+      "id": 1
+    }
+  ]
+}
