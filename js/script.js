@@ -412,3 +412,279 @@ function submitQ5() {
 
 }
     
+var total = 0;
+var cenaf = 0;
+var cenaN = 0;
+
+$(document).ready(function() {
+
+    var get1 = $.ajax({
+        type: "GET",
+        url: "http://localhost:3000/izborKurseva"
+        });
+        get1.done(function (podaci) {
+        $.each(podaci, function (i, podatak) {
+        $("#tabela tbody").append('<tr><td>' + podatak.course + '</td><td>' + podatak.date + '</td><td>' + podatak.duration + 
+        '</td><td>' + podatak.price +
+        '</td><td><button id="' + podatak.id + '" class="btn btn-outline-info text-dark px-5">Details</button></td><td><button id="' + 
+        podatak.id + '" class="btn btn-outline-info text-dark px-3">Reservations</button></td></tr>');
+        });
+        $("#tabela").dataTable({
+            paging: true,
+            ordering: true,
+            info: true,
+        });
+        });
+        get1.fail(function (podaci) {
+        alert(podaci.statusText);
+        });
+
+        $("#tabela tbody").on('click', 'button', function () {
+            if ($(this).hasClass("px-5")) {
+                $('#staticBackdrop').modal('toggle');
+            }
+            if ($(this).hasClass("px-3")) {
+                $('#modalUnos').modal('toggle');
+                var btnThis = $(this);
+                var tr = this.parentNode.parentNode;
+                $("#kuurs").attr("value", tr.cells[0].childNodes[0].data);
+                $("#ceena").attr("value", tr.cells[3].childNodes[0].data);
+                $("#ime").attr("placeholder", "Unesite ime");
+                $("#prezime").attr("placeholder", "Unesite prezime");
+                $("#email").attr("placeholder", "example@gmail.com");
+                $("#komentar").attr("placeholder", "Unesi komentar");
+
+                $("#forma").validate({
+                    rules: {
+                    ime: {
+                    required: true,
+                    minlength: 3
+                    },
+                    email: "required",
+                    prezime: {
+                    required: true,
+                    minlength: 3
+                    }
+                    },
+                    messages: {
+                        ime: {
+                            required: "Unesite vase ime",
+                            minlength: "Ime mora imati bar 3 karaktera"
+                        },
+                        email: "Unesite validan email",
+                        prezime: {
+                            required: "Unesite vase prezime",
+                            minlength: "Prezime mora imati bar 3 karaktera"
+                        },
+                        komentar: "Unesite komentar",
+                    },
+                    submitHandler: function () {
+                        var coursef = $("#kuurs").val();
+                        cenaf = $("#ceena").val();
+                        cenaN = parseInt(cenaf);
+                        var imef = $("#ime").val();
+                        var prezimef = $("#prezime").val();
+                        var emailf = $("#email").val();
+                        var komentarf = $("#komentar").val();
+
+                        var osoba2 = { ime2: imef, prezime2: prezimef, email2: emailf, komentar2: komentarf, kurs2: coursef, cena2: cenaf };
+                        $.ajax({
+                            url: "http://localhost:3000/rezervisaniKursevi/",
+                            type: "POST",
+                            data: osoba2,
+                            success: function (podatak) {
+                                var get = $.ajax({
+                                    type: "GET",
+                                    url: "http://localhost:3000/rezervisaniKursevi"
+                                });
+                            
+                                get.done(function (podaci) {
+                                   $("#tabela2 tbody").empty();
+                                    $.each(podaci, function (i, podatak) {
+                                        $("#tabela2 tbody").append('<tr><td>' + podatak.ime2 + '</td><td>' + podatak.prezime2 + '</td><td>' + podatak.email2 + 
+                                        '</td><td>' + podatak.kurs2 + '</td><td id="prize' + podatak.id + '">' + podatak.cena2 + '</td><td>' + podatak.komentar2 + '</td><td>' + '<button id="' + podatak.id + '" class="btn btn-outline-info text-dark px-3">Change Reservations</button></td><td><button id="' + 
+                                        podatak.id + '" class="btn btn-outline-info text-dark px-2">Delete Reservations</button></td></tr>');
+                                        
+                                    });
+                                    
+                                    $("#tabela2").dataTable();
+                                    
+
+                                });
+                                get.fail(function (podaci) {
+                                    alert(podaci.statusText);
+                                });
+                                
+                            }
+                        });
+                        $('#modalUnos').modal('toggle');
+                    }
+                });
+                $("#forma").trigger('reset');
+            }
+        });
+
+
+    var get = $.ajax({
+        type: "GET",
+        url: "http://localhost:3000/rezervisaniKursevi"
+        });
+        get.done(function (podaci) {
+        $.each(podaci, function (i, podatak) {
+            $("#tabela2 tbody").append('<tr><td>' + podatak.ime2 + '</td><td>' + podatak.prezime2 + '</td><td>' + podatak.email2 + 
+            '</td><td>' + podatak.kurs2 + '</td><td id="prize' + podatak.id + '">' + podatak.cena2 + '</td><td>' + podatak.komentar2 + '</td><td>' + '<button id="' + podatak.id + '" class="btn btn-outline-info text-dark px-3">Change Reservations</button></td><td><button id="' + 
+            podatak.id + '" class="btn btn-outline-info text-dark px-2">Delete Reservations</button></td></tr>');
+        });
+        $("#tabela2").dataTable({
+            paging: false,
+            ordering: false,
+            info: false,
+        });
+         $("#tabela2_filter > label").remove();
+
+        });
+        get.fail(function (podaci) {
+        alert(podaci.statusText);
+        });
+
+        $("#tabela2 tbody").on('click', 'button', function () {
+            if ($(this).hasClass("px-2")) {
+                $.ajax({
+                url: "http://localhost:3000/rezervisaniKursevi/" + $(this).attr("id"),
+                type: 'DELETE',
+                dataType: 'json',
+                success: function () {
+                console.log("Obrisano");
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown){
+                    alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                }
+                });
+                $(this).parent().parent().remove();
+                //total = total - cenaN;
+            }
+            else if ($(this).hasClass("px-3")) {
+                $('#modalUnos2').modal('toggle');
+                var btnThis = $(this);
+                var tr2 = this.parentNode.parentNode;
+                $("#ime2").attr("placeholder", tr2.cells[0].childNodes[0].data);
+                $("#prezime2").attr("placeholder", tr2.cells[1].childNodes[0].data);
+                $("#email2").attr("placeholder", tr2.cells[2].childNodes[0].data);
+                $("#kuurs2").attr("value", tr2.cells[3].childNodes[0].data);
+                $("#ceena2").attr("value", tr2.cells[4].childNodes[0].data);
+
+                $("#forma2").validate({
+                    rules: {
+                    ime2: {
+                    required: true,
+                    minlength: 3
+                    },
+                    email2: "required",
+                    prezime2: {
+                    required: true,
+                    minlength: 3
+                    }
+                    },
+                    messages: {
+                        ime2: {
+                            required: "Unesite vase ime",
+                            minlength: "Ime mora imati bar 3 karaktera"
+                        },
+                        email2: "Unesite validan email",
+                        prezime2: {
+                            required: "Unesite vase prezime",
+                            minlength: "Prezime mora imati bar 3 karaktera"
+                        },
+                        komentar2: "Unesite komentar",
+                    },
+                    submitHandler: function () {
+                        var imef = $("#ime2").val();
+                        var prezimef = $("#prezime2").val();
+                        var emailf = $("#email2").val();
+                        var komentarf = $("#komentar2").val();
+                        var kursf = $("#kuurs2").val();
+                        cenaf = $("#ceena2").val();
+                        
+                        cenaN = parseInt(cenaf);
+                        
+
+                        var osoba = { ime2: imef, prezime2: prezimef, email2: emailf, komentar2: komentarf, kurs2: kursf, cena2: cenaf };
+                        $.ajax({
+                            url: "http://localhost:3000/rezervisaniKursevi/" +
+                            btnThis.attr("id"),
+                            type: "PUT",
+                            data: osoba,
+                            success: function (podatak) {
+                                var get = $.ajax({
+                                    type: "GET",
+                                    url: "http://localhost:3000/rezervisaniKursevi"
+                                });
+                                
+                                get.done(function (podaci) {
+                                    $("#tabela2 tbody").empty();
+                                    $.each(podaci, function (i, podatak) {
+                                        $("#tabela2 tbody").append('<tr><td>' + podatak.ime2 + '</td><td>' + podatak.prezime2 + '</td><td>' + podatak.email2 + 
+                                        '</td><td>' + podatak.kurs2 + '</td><td id="prize' + podatak.id + '">' + podatak.cena2 + '</td><td>' + podatak.komentar2 + '</td><td>' + '<button id="' + podatak.id + '" class="btn btn-outline-info text-dark px-3">Change Reservations</button></td><td><button id="' + 
+                                        podatak.id + '" class="btn btn-outline-info text-dark px-2">Delete Reservations</button></td></tr>');
+                                        
+                                        
+                                    });
+
+                                    $("#tabela2").dataTable();
+                                    
+
+                                });
+                                get.fail(function (podaci) {
+                                    alert(podaci.statusText);
+                                });
+
+                                
+                            }
+                        });
+                        $('#modalUnos2').modal('toggle');
+
+                    }
+                });
+                
+                $("#forma2").trigger('reset');
+            }
+        });        
+        
+       
+        $("#kontejnerTabela2").hide();
+
+});
+
+
+
+
+
+$(document).ready(function() {
+    $(document).on("click", "#viewButton", function() {
+        if ($(this).text() == "View reservations") {
+            $(this).text("Back to Courses"); 
+            $("#totalPrize").removeClass("d-none");
+            $("#totalPrize").addClass("d-block");
+            $("#kontejnerTabela").hide();
+            $("#kontejnerTabela2").show();
+        } else {
+            $(this).text("View reservations");
+            $("#totalPrize").removeClass("d-block");
+            $("#totalPrize").addClass("d-none");
+            $("#kontejnerTabela").show();
+            $("#kontejnerTabela2").hide();
+        }; 
+
+        var sum = 0;
+        $('td[id^=prize]').each(function(){
+            sum += parseFloat($(this).text()); 
+            $("#totalPrize").text("TOTAL: " + sum + "$");
+        });  
+
+        
+    });
+
+   
+
+ });
+
